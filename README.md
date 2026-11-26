@@ -1,0 +1,23 @@
+# hoanysu-web
+> 這是一個網站，你可以在這裡搜尋到很多豪老師的梗圖。
+
+> 你可以自由下載/複製/發布這些圖片。
+
+> 你無須標明出處，也歡迎各位提供梗圖，此網站也會不定時更新。
+
+
+# 網址
+1. Github Pages : https://wayne27304.github.io/hoanysu-web/
+2. Vercel : https://hoanysu-web.vercel.app/
+
+# 聲明
+
+> 此網站與豪老師本人無關，皆為網友所製作的梗圖。
+
+> 若有侵犯隱私權等台灣法律請及時告知，將會立即刪除。
+
+> 所有圖片皆為 網路 上獲取。
+
+
+By [Wayne](https://wayne227304.dpdns.org)
+

@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>豪老師</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:#ffffff; color:#111111; padding:2rem 1rem; max-width:1040px; margin:0 auto; }
+  h1 { font-size:1.4rem; font-weight:600; margin-bottom:1rem; letter-spacing:0.04em; }
+  input { width:100%; padding:0.7rem 0.9rem; border:1px solid #111111; background:#ffffff; color:#111111; font-size:0.95rem; margin-bottom:1.5rem; outline:none; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem; }
+  .card { border:1px solid #111111; background:#ffffff; display:flex; flex-direction:column; }
+  .img-box { aspect-ratio:16/9; background:#f5f5f5; border-bottom:1px solid #111111; overflow:hidden; }
+  .img-box img { width:100%; height:100%; object-fit:cover; }
+  .body { padding:0.85rem; flex:1; display:flex; flex-direction:column; justify-content:space-between; gap:0.75rem; }
+  .quote { font-size:0.95rem; line-height:1.45; word-break:break-word; }
+  .actions { display:flex; gap:0.4rem; }
+  button { background:#ffffff; color:#111111; border:1px solid #111111; padding:0.25rem 0.6rem; font-size:0.8rem; cursor:pointer; }
+  button:hover { background:#111111; color:#ffffff; }
+</style>
+</head>
+<body>
+  <h1>豪老師</h1>
+  <input id="q" type="text" placeholder="搜尋台詞..." oninput="filterCards(this.value)">
+  <div class="grid" id="grid">
+
+        <article class="card" data-search="靠北大在褲子裡">
+            <div class="img-box">
+                <img src="./static/靠北大在褲子裡.jpg" alt="靠北大在褲子裡" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">靠北大在褲子裡</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/靠北大在褲子裡.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="靠北大在褲子裡">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="這天氣騎腳踏車會冷死嗎">
+            <div class="img-box">
+                <img src="./static/這天氣騎腳踏車會冷死嗎.webp" alt="這天氣騎腳踏車會冷死嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">這天氣騎腳踏車會冷死嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/這天氣騎腳踏車會冷死嗎.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="這天氣騎腳踏車會冷死嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="輪到你教育我了">
+            <div class="img-box">
+                <img src="./static/輪到你教育我了.png" alt="輪到你教育我了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">輪到你教育我了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/輪到你教育我了.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="輪到你教育我了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="輪到你教育我了-2">
+            <div class="img-box">
+                <img src="./static/輪到你教育我了-2.webp" alt="輪到你教育我了-2" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">輪到你教育我了-2</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/輪到你教育我了-2.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="輪到你教育我了-2">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="豪洨老師只會沉底石頭人">
+            <div class="img-box">
+                <img src="./static/豪洨老師只會沉底石頭人.jpg" alt="豪洨老師只會沉底石頭人" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">豪洨老師只會沉底石頭人</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/豪洨老師只會沉底石頭人.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="豪洨老師只會沉底石頭人">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="誠品還有美女嗎">
+            <div class="img-box">
+                <img src="./static/誠品還有美女嗎.jpg" alt="誠品還有美女嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">誠品還有美女嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/誠品還有美女嗎.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="誠品還有美女嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="要不要玩特戰英豪">
+            <div class="img-box">
+                <img src="./static/要不要玩特戰英豪.jpg" alt="要不要玩特戰英豪" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">要不要玩特戰英豪</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/要不要玩特戰英豪.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="要不要玩特戰英豪">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="要不要玩pubg">
+            <div class="img-box">
+                <img src="./static/要不要玩pubg.webp" alt="要不要玩pubg" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">要不要玩pubg</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/要不要玩pubg.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="要不要玩pubg">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="羅莉全是我的媽媽">
+            <div class="img-box">
+                <img src="./static/羅莉全是我的媽媽.webp" alt="羅莉全是我的媽媽" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">羅莉全是我的媽媽</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/羅莉全是我的媽媽.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="羅莉全是我的媽媽">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="皮炎豪羊">
+            <div class="img-box">
+                <img src="./static/皮炎豪羊.jpg" alt="皮炎豪羊" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">皮炎豪羊</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/皮炎豪羊.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="皮炎豪羊">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="留言區沒有人類">
+            <div class="img-box">
+                <img src="./static/留言區沒有人類.jpg" alt="留言區沒有人類" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">留言區沒有人類</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/留言區沒有人類.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="留言區沒有人類">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="物理+化學合計爆砍100分">
+            <div class="img-box">
+                <img src="./static/物理+化學合計爆砍100分.jpg" alt="物理+化學合計爆砍100分" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">物理+化學合計爆砍100分</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/物理+化學合計爆砍100分.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="物理+化學合計爆砍100分">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="根本沒有這種老師">
+            <div class="img-box">
+                <img src="./static/根本沒有這種老師.jpg" alt="根本沒有這種老師" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">根本沒有這種老師</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/根本沒有這種老師.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="根本沒有這種老師">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我的皮炎好癢">
+            <div class="img-box">
+                <img src="./static/我的皮炎好癢.jpg" alt="我的皮炎好癢" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我的皮炎好癢</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我的皮炎好癢.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我的皮炎好癢">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我智商太低看不懂什麼叫做反串">
+            <div class="img-box">
+                <img src="./static/我智商太低看不懂什麼叫做反串.jpg" alt="我智商太低看不懂什麼叫做反串" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我智商太低看不懂什麼叫做反串</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我智商太低看不懂什麼叫做反串.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我智商太低看不懂什麼叫做反串">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我是奶娃">
+            <div class="img-box">
+                <img src="./static/我是奶娃.jpg" alt="我是奶娃" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我是奶娃</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我是奶娃.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我是奶娃">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我支持蔣萬安">
+            <div class="img-box">
+                <img src="./static/我支持蔣萬安.jpg" alt="我支持蔣萬安" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我支持蔣萬安</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我支持蔣萬安.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我支持蔣萬安">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我只玩衛隊豬">
+            <div class="img-box">
+                <img src="./static/我只玩衛隊豬.jpg" alt="我只玩衛隊豬" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我只玩衛隊豬</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我只玩衛隊豬.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我只玩衛隊豬">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="幹你娘真的瞬間笑出來">
+            <div class="img-box">
+                <img src="./static/幹你娘真的瞬間笑出來.jpg" alt="幹你娘真的瞬間笑出來" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">幹你娘真的瞬間笑出來</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/幹你娘真的瞬間笑出來.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="幹你娘真的瞬間笑出來">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="小孩一直67是不是沒救了">
+            <div class="img-box">
+                <img src="./static/小孩一直67是不是沒救了.jpg" alt="小孩一直67是不是沒救了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">小孩一直67是不是沒救了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/小孩一直67是不是沒救了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="小孩一直67是不是沒救了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="完寶可夢真的沒救了嗎">
+            <div class="img-box">
+                <img src="./static/完寶可夢真的沒救了嗎.webp" alt="完寶可夢真的沒救了嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">完寶可夢真的沒救了嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/完寶可夢真的沒救了嗎.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="完寶可夢真的沒救了嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="如果我是dj你會愛我嗎">
+            <div class="img-box">
+                <img src="./static/如果我是dj你會愛我嗎.jpg" alt="如果我是dj你會愛我嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">如果我是dj你會愛我嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/如果我是dj你會愛我嗎.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="如果我是dj你會愛我嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="問號什麼學校只教問號">
+            <div class="img-box">
+                <img src="./static/問號什麼學校只教問號.png" alt="問號什麼學校只教問號" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">問號什麼學校只教問號</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/問號什麼學校只教問號.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="問號什麼學校只教問號">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="哥不是家豪只是哥長得太帥了">
+            <div class="img-box">
+                <img src="./static/哥不是家豪只是哥長得太帥了.jpg" alt="哥不是家豪只是哥長得太帥了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">哥不是家豪只是哥長得太帥了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/哥不是家豪只是哥長得太帥了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="哥不是家豪只是哥長得太帥了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你賭對喽">
+            <div class="img-box">
+                <img src="./static/你賭對喽.jpg" alt="你賭對喽" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你賭對喽</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你賭對喽.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你賭對喽">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你是不是有林守策">
+            <div class="img-box">
+                <img src="./static/你是不是有林守策.jpg" alt="你是不是有林守策" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你是不是有林守策</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你是不是有林守策.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你是不是有林守策">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你在干擾我的生活">
+            <div class="img-box">
+                <img src="./static/你在干擾我的生活.webp" alt="你在干擾我的生活" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你在干擾我的生活</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你在干擾我的生活.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你在干擾我的生活">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="三小ai醜死了">
+            <div class="img-box">
+                <img src="./static/三小ai醜死了.jpg" alt="三小ai醜死了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">三小ai醜死了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/三小ai醜死了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="三小ai醜死了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="gta vi pc到底什麼時候出">
+            <div class="img-box">
+                <img src="./static/gtavipc到底什麼時候出.jpg" alt="gta vi pc到底什麼時候出" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">gta vi pc到底什麼時候出</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/gtavipc到底什麼時候出.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="gta vi pc到底什麼時候出">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="去烘乾啦">
+            <div class="img-box">
+                <img src="./static/去烘乾啦.png" alt="去烘乾啦" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">去烘乾啦</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/去烘乾啦.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="去烘乾啦">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="傻逼吧">
+            <div class="img-box">
+                <img src="./static/傻逼吧.png" alt="傻逼吧" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">傻逼吧</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/傻逼吧.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="傻逼吧">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你又是什麼咖">
+            <div class="img-box">
+                <img src="./static/你又是什麼咖.png" alt="你又是什麼咖" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你又是什麼咖</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你又是什麼咖.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你又是什麼咖">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你是給">
+            <div class="img-box">
+                <img src="./static/你是給.png" alt="你是給" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你是給</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你是給.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你是給">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="鼻屎弄得奶奶笑">
+            <div class="img-box">
+                <img src="./static/鼻屎弄得奶奶校.jpg" alt="鼻屎弄得奶奶笑" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">鼻屎弄得奶奶笑</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/鼻屎弄得奶奶校.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="鼻屎弄得奶奶笑">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="香奈兒是1">
+            <div class="img-box">
+                <img src="./static/香奈兒是1.jpg" alt="香奈兒是1" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">香奈兒是1</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/香奈兒是1.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="香奈兒是1">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="看到你就想操翻你屁眼">
+            <div class="img-box">
+                <img src="./static/看到你就想操翻你屁眼.jpg" alt="看到你就想操翻你屁眼" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">看到你就想操翻你屁眼</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/看到你就想操翻你屁眼.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="看到你就想操翻你屁眼">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="比愛普斯坦更加糟糕">
+            <div class="img-box">
+                <img src="./static/比愛普斯坦更加糟糕.webp" alt="比愛普斯坦更加糟糕" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">比愛普斯坦更加糟糕</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/比愛普斯坦更加糟糕.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="比愛普斯坦更加糟糕">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="柚子廚蒸鵝心">
+            <div class="img-box">
+                <img src="./static/柚子廚蒸鵝心.jpg" alt="柚子廚蒸鵝心" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">柚子廚蒸鵝心</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/柚子廚蒸鵝心.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="柚子廚蒸鵝心">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="林政億竟然還在">
+            <div class="img-box">
+                <img src="./static/林政億竟然還在.jpg" alt="林政億竟然還在" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">林政億竟然還在</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/林政億竟然還在.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="林政億竟然還在">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="最喜歡野獸先輩了">
+            <div class="img-box">
+                <img src="./static/最喜歡野獸先輩了.jpg" alt="最喜歡野獸先輩了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">最喜歡野獸先輩了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/最喜歡野獸先輩了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="最喜歡野獸先輩了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我支持羅傑">
+            <div class="img-box">
+                <img src="./static/我支持羅傑.jpg" alt="我支持羅傑" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我支持羅傑</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我支持羅傑.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我支持羅傑">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我今天是來說一件事的">
+            <div class="img-box">
+                <img src="./static/我今天是來說一件事的.webp" alt="我今天是來說一件事的" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我今天是來說一件事的</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我今天是來說一件事的.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我今天是來說一件事的">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="想讀書給我回去玩荒野">
+            <div class="img-box">
+                <img src="./static/想讀書給我回去玩荒野.jpg" alt="想讀書給我回去玩荒野" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">想讀書給我回去玩荒野</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/想讀書給我回去玩荒野.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="想讀書給我回去玩荒野">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="想上羅布勒斯大學免談">
+            <div class="img-box">
+                <img src="./static/想上羅布勒斯大學免談.webp" alt="想上羅布勒斯大學免談" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">想上羅布勒斯大學免談</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/想上羅布勒斯大學免談.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="想上羅布勒斯大學免談">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="康神開播了真的假的">
+            <div class="img-box">
+                <img src="./static/康神開播了真的假的.webp" alt="康神開播了真的假的" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">康神開播了真的假的</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/康神開播了真的假的.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="康神開播了真的假的">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="台北的市長沈伯洋">
+            <div class="img-box">
+                <img src="./static/台北的市長沈伯洋.png" alt="台北的市長沈伯洋" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">台北的市長沈伯洋</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/台北的市長沈伯洋.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="台北的市長沈伯洋">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你什麼咖小">
+            <div class="img-box">
+                <img src="./static/你什麼咖小.jpg" alt="你什麼咖小" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你什麼咖小</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你什麼咖小.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你什麼咖小">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="ai繪圖真好看">
+            <div class="img-box">
+                <img src="./static/ai繪圖真好看.jpg" alt="ai繪圖真好看" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">ai繪圖真好看</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/ai繪圖真好看.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="ai繪圖真好看">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="皮眼爆炸了">
+            <div class="img-box">
+                <img src="./static/皮眼爆炸了.jpg" alt="皮眼爆炸了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">皮眼爆炸了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/皮眼爆炸了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="皮眼爆炸了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="用毒蛇的毒毒毒蛇會不會被毒死">
+            <div class="img-box">
+                <img src="./static/用毒蛇的毒毒毒蛇會不會被毒死.jpg" alt="用毒蛇的毒毒毒蛇會不會被毒死" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">用毒蛇的毒毒毒蛇會不會被毒死</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/用毒蛇的毒毒毒蛇會不會被毒死.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="用毒蛇的毒毒毒蛇會不會被毒死">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我身分證的性名攔叫豪洋">
+            <div class="img-box">
+                <img src="./static/我身分證的性名攔叫豪洋.webp" alt="我身分證的性名攔叫豪洋" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我身分證的性名攔叫豪洋</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我身分證的性名攔叫豪洋.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我身分證的性名攔叫豪洋">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我的哀居被豪老師封鎖了">
+            <div class="img-box">
+                <img src="./static/我的哀居被豪老師封鎖了.jpg" alt="我的哀居被豪老師封鎖了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我的哀居被豪老師封鎖了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我的哀居被豪老師封鎖了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我的哀居被豪老師封鎖了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我是尊貴的柚子社玩家">
+            <div class="img-box">
+                <img src="./static/我是尊貴的柚子社玩家.webp" alt="我是尊貴的柚子社玩家" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我是尊貴的柚子社玩家</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我是尊貴的柚子社玩家.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我是尊貴的柚子社玩家">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我來誠品絕對不是因為穿短版的妹很多">
+            <div class="img-box">
+                <img src="./static/我來誠品絕對不是因為穿短版的妹很多.jpg" alt="我來誠品絕對不是因為穿短版的妹很多" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我來誠品絕對不是因為穿短版的妹很多</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我來誠品絕對不是因為穿短版的妹很多.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我來誠品絕對不是因為穿短版的妹很多">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="年輕人到底有沒有歸投">
+            <div class="img-box">
+                <img src="./static/年輕人到底有沒有歸投.jpg" alt="年輕人到底有沒有歸投" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">年輕人到底有沒有歸投</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/年輕人到底有沒有歸投.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="年輕人到底有沒有歸投">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="學會這五招段考考0分學霸都不用的學習辦法">
+            <div class="img-box">
+                <img src="./static/學會這五招段考考0分學霸都不用的學習辦法.webp" alt="學會這五招段考考0分學霸都不用的學習辦法" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">學會這五招段考考0分學霸都不用的學習辦法</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/學會這五招段考考0分學霸都不用的學習辦法.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="學會這五招段考考0分學霸都不用的學習辦法">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="如果情緒有天氣那我困在陰天裏">
+            <div class="img-box">
+                <img src="./static/如果情緒有天氣那我困在陰天裏.jpg" alt="如果情緒有天氣那我困在陰天裏" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">如果情緒有天氣那我困在陰天裏</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/如果情緒有天氣那我困在陰天裏.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="如果情緒有天氣那我困在陰天裏">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="壓力馬死肉">
+            <div class="img-box">
+                <img src="./static/壓力馬死肉.jpg" alt="壓力馬死肉" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">壓力馬死肉</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/壓力馬死肉.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="壓力馬死肉">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你是一個一個">
+            <div class="img-box">
+                <img src="./static/你是一個一個.jpg" alt="你是一個一個" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你是一個一個</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你是一個一個.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你是一個一個">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你應該去看hololive">
+            <div class="img-box">
+                <img src="./static/你應該去看hololive.jpg" alt="你應該去看hololive" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你應該去看hololive</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你應該去看hololive.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你應該去看hololive">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="主唱太拼命了">
+            <div class="img-box">
+                <img src="./static/主唱太拼命了.jpg" alt="主唱太拼命了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">主唱太拼命了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/主唱太拼命了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="主唱太拼命了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="連這都不會">
+            <div class="img-box">
+                <img src="./static/連這都不會.webp" alt="連這都不會" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">連這都不會</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/連這都不會.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="連這都不會">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="ai教育翻車了？">
+            <div class="img-box">
+                <img src="./static/AI教育翻車了？.png" alt="AI教育翻車了？" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">AI教育翻車了？</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/AI教育翻車了？.png">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="AI教育翻車了？">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="阿這有傻逼">
+            <div class="img-box">
+                <img src="./static/阿這有傻逼.jpg" alt="阿這有傻逼" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">阿這有傻逼</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/阿這有傻逼.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="阿這有傻逼">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="豪老師標題是否成為一種新的藝術風格">
+            <div class="img-box">
+                <img src="./static/豪老師標題是否成為一種新的藝術風格.webp" alt="豪老師標題是否成為一種新的藝術風格" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">豪老師標題是否成為一種新的藝術風格</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/豪老師標題是否成為一種新的藝術風格.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="豪老師標題是否成為一種新的藝術風格">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="豪老師力挺cortis">
+            <div class="img-box">
+                <img src="./static/豪老師力挺cortis.jpg" alt="豪老師力挺cortis" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">豪老師力挺cortis</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/豪老師力挺cortis.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="豪老師力挺cortis">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="無聊死了">
+            <div class="img-box">
+                <img src="./static/無聊死了.jpg" alt="無聊死了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">無聊死了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/無聊死了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="無聊死了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="學校消失了">
+            <div class="img-box">
+                <img src="./static/學校消失了.webp" alt="學校消失了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">學校消失了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/學校消失了.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="學校消失了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="學校有用">
+            <div class="img-box">
+                <img src="./static/學校有用.webp" alt="學校有用" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">學校有用</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/學校有用.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="學校有用">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="哩洗勒供三小">
+            <div class="img-box">
+                <img src="./static/哩洗勒供三小.jpg" alt="哩洗勒供三小" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">哩洗勒供三小</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/哩洗勒供三小.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="哩洗勒供三小">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="台北順起來">
+            <div class="img-box">
+                <img src="./static/台北順起來.webp" alt="台北順起來" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">台北順起來</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/台北順起來.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="台北順起來">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="做梗圖了不起喔">
+            <div class="img-box">
+                <img src="./static/做梗圖了不起喔.jpg" alt="做梗圖了不起喔" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">做梗圖了不起喔</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/做梗圖了不起喔.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="做梗圖了不起喔">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="野排隊友還有救嗎">
+            <div class="img-box">
+                <img src="./static/野排隊友還有救嗎.webp" alt="野排隊友還有救嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">野排隊友還有救嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/野排隊友還有救嗎.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="野排隊友還有救嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="這到底是何意味阿">
+            <div class="img-box">
+                <img src="./static/這到底是何意味阿.jpg" alt="這到底是何意味阿" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">這到底是何意味阿</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/這到底是何意味阿.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="這到底是何意味阿">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="誠品有妹誰不看">
+            <div class="img-box">
+                <img src="./static/誠品有妹誰不看.jpg" alt="誠品有妹誰不看" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">誠品有妹誰不看</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/誠品有妹誰不看.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="誠品有妹誰不看">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="管好你自己">
+            <div class="img-box">
+                <img src="./static/管好你自己.jpg" alt="管好你自己" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">管好你自己</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/管好你自己.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="管好你自己">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="真的假的">
+            <div class="img-box">
+                <img src="./static/真的假的.webp" alt="真的假的" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">真的假的</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/真的假的.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="真的假的">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="當然有可能">
+            <div class="img-box">
+                <img src="./static/當然有可能.jpg" alt="當然有可能" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">當然有可能</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/當然有可能.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="當然有可能">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="申博羊是攻還是守">
+            <div class="img-box">
+                <img src="./static/申博羊是攻還是守.jpg" alt="申博羊是攻還是守" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">申博羊是攻還是守</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/申博羊是攻還是守.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="申博羊是攻還是守">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="為什麼演奏春日影">
+            <div class="img-box">
+                <img src="./static/為什麼演奏春日影.jpg" alt="為什麼演奏春日影" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">為什麼演奏春日影</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/為什麼演奏春日影.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="為什麼演奏春日影">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="滅霸的爸爸滅建國">
+            <div class="img-box">
+                <img src="./static/滅霸的爸爸滅建國.webp" alt="滅霸的爸爸滅建國" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">滅霸的爸爸滅建國</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/滅霸的爸爸滅建國.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="滅霸的爸爸滅建國">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="根本沒有這樣的梗圖">
+            <div class="img-box">
+                <img src="./static/根本沒有這樣的梗圖.webp" alt="根本沒有這樣的梗圖" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">根本沒有這樣的梗圖</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/根本沒有這樣的梗圖.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="根本沒有這樣的梗圖">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="文是這樣發的嗎">
+            <div class="img-box">
+                <img src="./static/文是這樣發的嗎.webp" alt="文是這樣發的嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">文是這樣發的嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/文是這樣發的嗎.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="文是這樣發的嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我真的特別愛你，為什麼你會流淚">
+            <div class="img-box">
+                <img src="./static/我真的特別愛你，為什麼你會流淚.jpg" alt="我真的特別愛你，為什麼你會流淚" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我真的特別愛你，為什麼你會流淚</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我真的特別愛你，為什麼你會流淚.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我真的特別愛你，為什麼你會流淚">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我是如何出櫃的">
+            <div class="img-box">
+                <img src="./static/我是如何出櫃的.jpg" alt="我是如何出櫃的" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我是如何出櫃的</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我是如何出櫃的.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我是如何出櫃的">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我擁有20元巨資">
+            <div class="img-box">
+                <img src="./static/我擁有20元巨資.jpg" alt="我擁有20元巨資" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我擁有20元巨資</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我擁有20元巨資.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我擁有20元巨資">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我去不早說">
+            <div class="img-box">
+                <img src="./static/我去不早說.webp" alt="我去不早說" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我去不早說</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我去不早說.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我去不早說">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我們是查理科克">
+            <div class="img-box">
+                <img src="./static/我們是查理科克.jpg" alt="我們是查理科克" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我們是查理科克</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我們是查理科克.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我們是查理科克">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="想玩gta，免談">
+            <div class="img-box">
+                <img src="./static/想玩gta，免談.webp" alt="想玩gta，免談" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">想玩gta，免談</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/想玩gta，免談.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="想玩gta，免談">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="學校根本沒有教">
+            <div class="img-box">
+                <img src="./static/學校根本沒有教.jpg" alt="學校根本沒有教" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">學校根本沒有教</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/學校根本沒有教.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="學校根本沒有教">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="孩阿">
+            <div class="img-box">
+                <img src="./static/孩阿.jpg" alt="孩阿" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">孩阿</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/孩阿.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="孩阿">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="好啊現在都不理我了">
+            <div class="img-box">
+                <img src="./static/好啊現在都不理我了.webp" alt="好啊現在都不理我了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">好啊現在都不理我了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/好啊現在都不理我了.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="好啊現在都不理我了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="大便好爽">
+            <div class="img-box">
+                <img src="./static/大便好爽.jpg" alt="大便好爽" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">大便好爽</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/大便好爽.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="大便好爽">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="台大也救不動">
+            <div class="img-box">
+                <img src="./static/台大也救不動.jpg" alt="台大也救不動" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">台大也救不動</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/台大也救不動.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="台大也救不動">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="只用豪老師梗圖溝通是有可能的嗎">
+            <div class="img-box">
+                <img src="./static/只用豪老師梗圖溝通是有可能的嗎.jpg" alt="只用豪老師梗圖溝通是有可能的嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">只用豪老師梗圖溝通是有可能的嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/只用豪老師梗圖溝通是有可能的嗎.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="只用豪老師梗圖溝通是有可能的嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="別再造謠">
+            <div class="img-box">
+                <img src="./static/別再造謠.webp" alt="別再造謠" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">別再造謠</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/別再造謠.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="別再造謠">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你長得像我妹妹">
+            <div class="img-box">
+                <img src="./static/你長得像我妹妹.jpg" alt="你長得像我妹妹" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你長得像我妹妹</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你長得像我妹妹.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你長得像我妹妹">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你道歉我就要接受喔">
+            <div class="img-box">
+                <img src="./static/你道歉我就要接受喔.jpg" alt="你道歉我就要接受喔" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你道歉我就要接受喔</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你道歉我就要接受喔.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你道歉我就要接受喔">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你應該去看scp基金會">
+            <div class="img-box">
+                <img src="./static/你應該去看scp基金會.jpg" alt="你應該去看scp基金會" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你應該去看scp基金會</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你應該去看scp基金會.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你應該去看scp基金會">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你只是怕了">
+            <div class="img-box">
+                <img src="./static/你只是怕了.jpg" alt="你只是怕了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你只是怕了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你只是怕了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你只是怕了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你到底在說什麼">
+            <div class="img-box">
+                <img src="./static/你到底在說什麼.webp" alt="你到底在說什麼" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你到底在說什麼</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你到底在說什麼.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你到底在說什麼">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="錢是這樣花的嗎">
+            <div class="img-box">
+                <img src="./static/錢是這樣花的嗎.jpg" alt="錢是這樣花的嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">錢是這樣花的嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/錢是這樣花的嗎.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="錢是這樣花的嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="誰欺負我小孩">
+            <div class="img-box">
+                <img src="./static/誰欺負我小孩.jpg" alt="誰欺負我小孩" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">誰欺負我小孩</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/誰欺負我小孩.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="誰欺負我小孩">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="職場巨嬰">
+            <div class="img-box">
+                <img src="./static/職場巨嬰.jpg" alt="職場巨嬰" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">職場巨嬰</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/職場巨嬰.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="職場巨嬰">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="爸媽這些話別再說了">
+            <div class="img-box">
+                <img src="./static/爸媽這些話別再說了.jpg" alt="爸媽這些話別再說了" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">爸媽這些話別再說了</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/爸媽這些話別再說了.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="爸媽這些話別再說了">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="孩子的容貌焦慮">
+            <div class="img-box">
+                <img src="./static/孩子的容貌焦慮.jpg" alt="孩子的容貌焦慮" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">孩子的容貌焦慮</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/孩子的容貌焦慮.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="孩子的容貌焦慮">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="孩子放不下手機的真相">
+            <div class="img-box">
+                <img src="./static/孩子放不下手機的真相.jpg" alt="孩子放不下手機的真相" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">孩子放不下手機的真相</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/孩子放不下手機的真相.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="孩子放不下手機的真相">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你是讀書的料喔">
+            <div class="img-box">
+                <img src="./static/你是讀書的料喔.jpg" alt="你是讀書的料喔" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你是讀書的料喔</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你是讀書的料喔.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你是讀書的料喔">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="學校還有用嗎">
+            <div class="img-box">
+                <img src="./static/學校還有用嗎.jpg" alt="學校還有用嗎" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">學校還有用嗎</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/學校還有用嗎.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="學校還有用嗎">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="這能力為什麼學校不教">
+            <div class="img-box">
+                <img src="./static/這能力為什麼學校不教.webp" alt="這能力為什麼學校不教" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">這能力為什麼學校不教</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/這能力為什麼學校不教.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="這能力為什麼學校不教">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="被排挤的孩子">
+            <div class="img-box">
+                <img src="./static/被排挤的孩子.webp" alt="被排挤的孩子" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">被排挤的孩子</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/被排挤的孩子.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="被排挤的孩子">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="肛烈的治疗方式">
+            <div class="img-box">
+                <img src="./static/肛烈的治疗方式.jpg" alt="肛烈的治疗方式" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">肛烈的治疗方式</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/肛烈的治疗方式.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="肛烈的治疗方式">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="特殊生">
+            <div class="img-box">
+                <img src="./static/特殊生.jpg" alt="特殊生" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">特殊生</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/特殊生.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="特殊生">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="我根本没讲过">
+            <div class="img-box">
+                <img src="./static/我根本没讲过.jpg" alt="我根本没讲过" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">我根本没讲过</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/我根本没讲过.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="我根本没讲过">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="你準備收律師傳票">
+            <div class="img-box">
+                <img src="./static/你準備收律師傳票.jpg" alt="你準備收律師傳票" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">你準備收律師傳票</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/你準備收律師傳票.jpg">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="你準備收律師傳票">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+
+        <article class="card" data-search="智商堪憂，以後去考羅布勒斯大學">
+            <div class="img-box">
+                <img src="./static/roblox.webp" alt="智商堪憂，以後去考羅布勒斯大學" loading="lazy" onerror="this.remove()">
+            </div>
+            <div class="body">
+                <div class="quote">智商堪憂，以後去考羅布勒斯大學</div>
+                <div class="actions">
+                    <button type="button" onclick="copyImage(this)" data-img="./static/roblox.webp">複製圖片</button>
+                    <button type="button" onclick="copyText(this)" data-text="智商堪憂，以後去考羅布勒斯大學">複製文字</button>
+                </div>
+            </div>
+        </article>
+        
+  </div>
+  <script>
+    function filterCards(val) {
+      const kws = val.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      document.querySelectorAll('#grid .card').forEach(card => {
+        const hay = card.getAttribute('data-search') || '';
+        const match = kws.every(k => hay.includes(k));
+        card.style.display = match ? '' : 'none';
+      });
+    }
+    async function copyImage(btn) {
+      const imgSrc = btn.getAttribute('data-img');
+      const old = btn.textContent;
+      if (!imgSrc) return;
+      try {
+        if (!navigator.clipboard || !window.ClipboardItem) throw new Error('no clipboard');
+        const resp = await fetch(encodeURI(imgSrc));
+        if (!resp.ok) throw new Error('fetch fail');
+        const blob = await resp.blob();
+        let pngBlob = blob;
+        if (blob.type !== 'image/png') {
+          const bitmap = await createImageBitmap(blob);
+          const canvas = document.createElement('canvas');
+          canvas.width = bitmap.width;
+          canvas.height = bitmap.height;
+          canvas.getContext('2d').drawImage(bitmap, 0, 0);
+          pngBlob = await new Promise((resolve, reject) => {
+            canvas.toBlob(b => b ? resolve(b) : reject(new Error('toBlob fail')), 'image/png');
+          });
+        }
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': pngBlob })]);
+        btn.textContent = '已複製圖片';
+      } catch (_) {
+        btn.textContent = '複製失敗';
+      }
+      setTimeout(() => btn.textContent = old, 1000);
+    }
+    function copyText(btn) {
+      navigator.clipboard.writeText(btn.getAttribute('data-text'));
+      const old = btn.textContent;
+      btn.textContent = '已複製';
+      setTimeout(() => btn.textContent = old, 1000);
+    }
+  </script>
+</body>
+</html>

@@ -7,8 +7,8 @@
 
 
 # 網址
-1. Github Pages : https://wayne27304.github.io/hoanysu-web/
-2. Vercel : https://hoanysu-web.vercel.app/
+
+https://hoanysu-web.vercel.app/
 
 # 聲明
 
